@@ -1,5 +1,5 @@
 # Tomcat 7
-# VERSION 0.1
+# VERSION 0.2
 
 FROM smile/java7-server
 
@@ -23,6 +23,9 @@ ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 
 # Runit Tomcat service
 ADD tomcat.sh /etc/service/tomcat/run
+
+# Set admin password
+ENV TOMCAT_PASS="passw0rd"
 
 # Use baseimage-docker's init system.
 CMD ["/sbin/my_init"]
