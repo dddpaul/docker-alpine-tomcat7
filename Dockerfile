@@ -21,6 +21,10 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*  
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 
+# Install jstatd init script
+ADD jstatd.sh /tomcat/bin/
+ADD jstatd.policy /tomcat/conf/
+
 # Runit Tomcat service
 ADD tomcat.sh /etc/service/tomcat/run
 
