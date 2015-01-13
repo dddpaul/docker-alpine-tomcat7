@@ -17,5 +17,5 @@ CATALINA_OPTS="${CATALINA_OPTS} \
 -Dcom.sun.management.jmxremote.authenticate=false"
 
 export CATALINA_OPTS
-
+/tomcat/bin/jstatd.sh start
 exec ${CATALINA_HOME}/bin/catalina.sh run
