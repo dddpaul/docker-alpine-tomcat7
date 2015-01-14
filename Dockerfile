@@ -1,5 +1,5 @@
 # Tomcat 7
-# VERSION 0.3
+# VERSION 0.4
 
 FROM smile/java7-server
 
@@ -23,6 +23,10 @@ ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
 
 # Setup Java options
 ADD setenv.sh /tomcat/bin/
+
+# Setup SNMP
+ADD snmp.acl /tomcat/conf/
+RUN chmod 0600 /tomcat/conf/snmp.acl
 
 # Install jstatd init script
 ADD jstatd.sh /tomcat/bin/
