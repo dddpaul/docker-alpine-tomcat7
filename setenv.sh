@@ -15,5 +15,3 @@ CATALINA_OPTS="${CATALINA_OPTS} \
 -Dcom.sun.management.snmp.port=161 \
 -Dcom.sun.management.snmp.acl.file=/tomcat/conf/snmp.acl \
 -Dcom.sun.management.snmp.interface=0.0.0.0"
-
-export CATALINA_OPTS
