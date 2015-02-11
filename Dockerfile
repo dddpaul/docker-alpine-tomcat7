@@ -1,5 +1,5 @@
 # Tomcat 7
-# VERSION 0.4
+# VERSION 0.5
 
 FROM smile/java7-server
 
@@ -9,7 +9,7 @@ RUN apt-get update && \
 	apt-get install -yq --no-install-recommends wget pwgen ca-certificates
 
 ENV TOMCAT_MAJOR_VERSION 7
-ENV TOMCAT_MINOR_VERSION 7.0.55
+ENV TOMCAT_MINOR_VERSION 7.0.59
 ENV CATALINA_HOME /tomcat
 
 # Install Apache Tomcat
