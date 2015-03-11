@@ -1,8 +1,8 @@
 # Memory limits and GC
 CATALINA_OPTS="${CATALINA_OPTS} -Xms256m -Xmx256m -XX:PermSize=96m -XX:MaxPermSize=96m -XX:+UseConcMarkSweepGC"
 
-# Enable GC logging
-CATALINA_OPTS="${CATALINA_OPTS} -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:/tomcat/logs/memory.log"
+# Enable GC logging and heap dump generation
+CATALINA_OPTS="${CATALINA_OPTS} -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:/tomcat/logs/memory.log -XX:+HeapDumpOnOutOfMemoryError"
 
 # Enable JMX remote access
 CATALINA_OPTS="${CATALINA_OPTS} \
