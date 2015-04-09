@@ -1,7 +1,7 @@
 # Tomcat 7
 # VERSION 0.5
 
-FROM smile/java7-server
+FROM smile/java8-server
 
 MAINTAINER Pavel Derendyaev <pderendyaev@smile-net.ru>
 
