@@ -1,5 +1,5 @@
 # Tomcat 7
-# VERSION 0.5
+# VERSION 0.6
 
 FROM smile/java8-server
 
@@ -20,6 +20,9 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     mv apache-tomcat* tomcat && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*  
 ADD create_tomcat_admin_user.sh /create_tomcat_admin_user.sh
+
+# Install Tomcat main config file
+ADD server.xml /tomcat/conf/
 
 # Setup Java options
 ADD setenv.sh /tomcat/bin/
