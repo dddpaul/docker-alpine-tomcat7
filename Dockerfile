@@ -1,5 +1,5 @@
 # Tomcat 7
-# VERSION 0.6
+# VERSION 0.7
 
 FROM smile/java8-server
 

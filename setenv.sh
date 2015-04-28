@@ -1,5 +1,5 @@
 # Memory limits and GC
-CATALINA_OPTS="${CATALINA_OPTS} -Xms512m -Xmx512m -XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=128m -XX:+UseConcMarkSweepGC"
+CATALINA_OPTS="${CATALINA_OPTS} -Xms512m -Xmx512m -XX:MetaspaceSize=256m -XX:MaxMetaspaceSize=256m -XX:+UseConcMarkSweepGC"
 
 # Enable GC logging and heap dump generation
 CATALINA_OPTS="${CATALINA_OPTS} -XX:+PrintGCDetails -XX:+PrintGCDateStamps -Xloggc:/tomcat/logs/memory.log -XX:+HeapDumpOnOutOfMemoryError"
