@@ -16,3 +16,7 @@ RUN wget -q https://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR_VERSION
     mv apache-tomcat* tomcat
 
 ADD root /
+
+ENTRYPOINT ["/tomcat.sh"]
+
+EXPOSE 8080
